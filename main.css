@@ -1,0 +1,585 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+* {
+
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Playfair Display', serif;
+}
+
+@media screen and (max-width:600px) {
+    header {
+        flex-direction: column;
+align-items: center;
+
+    }
+}
+@media screen and (max-width:600px) {
+    nav {
+        flex-direction: column;
+    }
+
+} 
+*/
+body {
+    overflow-x: hidden;
+    font-family: 'Playfair Display', serif;
+    margin: 0;
+}
+
+#container {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-areas:
+        'header'
+        'nav'
+        'main'
+        'footer ';
+}
+/*Cabeçalho*/
+header {
+    grid-area: header;
+    background-image: linear-gradient(to right, #ebf7f8, #d0e0eb, #88abc2, #49708a);
+    display: flex;
+    justify-content: space-between;
+    padding: 2%;
+    padding-left: 10%;
+    padding-right: 10%;
+
+
+}
+
+header h2 {
+    font-size: 2rem;
+    font-family: 'Playfair Display', serif;
+    font-style: bold;
+    color: #49708a;
+}
+
+header form {
+    padding-top: 10px;
+}
+
+header form input {
+    padding: 10px;
+    border-radius: 100px;
+    border: 1px solid #ccc;
+    min-width: 70px;
+    color: #333;
+    font-size: 0.95rem;
+}
+
+header form button {
+    padding: 10px;
+    border-radius: 100px;
+    border: 1px solid #ebf7f8;
+    background-color: #ebf7f8;
+    color: #000000;
+    min-width: 45px;
+    min-height: 45px;
+}
+
+header form img {
+    width: 22px;
+    height: 22px;
+}
+/*menu*/
+nav {
+    background-color: #ebf7f8;
+    display: flex;
+    justify-content: space-between;
+    font-family: 'Playfair Display', serif;
+    color: #49708a;
+    grid-area: nav;
+    position: sticky;
+    top: 0;
+    align-items: center;
+}
+
+nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    align-items: center;
+}
+
+nav ul li {
+    padding: 10px;
+    margin: 10px;
+}
+
+nav ul li img {
+    height: 20px;
+    vertical-align: top;
+}
+
+nav ul li:hover {
+    background-color: #49708a;
+    border-radius: 100px;
+    cursor: pointer;
+    color: #d0e0eb;
+}
+
+.dropdown {
+    border: 1px solid #d0e0eb;
+    position: absolute;
+    background-color: #d0e0eb;
+    display: flex;
+    flex-direction: column;
+    margin-top: 5px;
+    margin-left: 5px;
+    display: none;
+    border-radius: 25px;
+    color: #49708a;
+}
+
+li:hover .dropdown {
+    display: block;
+}
+/*principla*/
+main {
+    grid-area: main;
+    max-width: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+.inicio {
+    display: grid;
+    grid-template-columns: 80% 20%;
+    grid-template-areas:
+        'generosP publi'
+        'login publi';
+
+
+}
+/*menu de generos*/
+.generosP {
+    border: 3px solid #2a6f93;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 20px;
+    font-family: 'Playfair Display', sans-serif;
+    width: 80%;
+    height: 95%;
+    grid-area: generosP;
+    margin-left: 10%;
+}
+
+#generospopulares {
+    border: hidden;
+}
+
+fieldset #generos {
+    border: 1px solid #2a6f93;
+    padding: 10px;
+    margin: 15px;
+    border-radius: 10px;
+}
+
+/*login*/
+.login {
+    border: 3px solid #f1f1f1;
+    border-radius: 5px;
+    width: 80%;
+    height: 450px;
+    font-family: 'Playfair Display', sans-serif;
+    padding: 10px;
+    margin: 10px;
+    grid-area: login;
+    margin-left: 10%;
+}
+
+#entrada {
+    width: 80%;
+    padding: 10px;
+    margin: 10px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    border-radius: 30px;
+}
+
+#bt {
+    background-color: #2a6f93;
+    color: white;
+    padding: 10px;
+    margin: 30px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    width: 80%;
+    height: 40px;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+/*publicidade*/
+.publi {
+    background-color: #2a6f93;
+    width: 100%;
+    height: 95%;
+    border: 3px solid #f1f1f1;
+    border-radius: 10px;
+    font-family: 'Playfair Display', sans-serif;
+    padding: 10%;
+    margin: 10%;
+    grid-area: publi;
+    align-self: flex-start;
+    
+}
+
+.publi:hover {
+    opacity: 0.8;
+}
+
+.publi h2 {
+    color: white;
+    text-align: center;
+    font-size: 4vh;
+    font-family: 'Playfair Display', sans-serif;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+.publi fieldset {
+    border: none;
+}
+
+.publi p {
+    text-align: center;
+    font-size: 16px;
+    font-family: 'Playfair Display', sans-serif;
+    font-weight: 700;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.publi img {
+    width: 80%;
+    height: 80%;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-left: 10%;
+    margin-right: 10%;
+    border-radius: 30px;
+}
+
+/*livros prinicpais*/
+.main-books {
+    width: 100%;
+    margin: 5px;
+    padding: 5px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 5px;
+}
+
+#books {
+    width: 250px;
+    height: 450px;
+    border: 3px solid #2a6f93;
+    border-radius: 20px;
+    background-color: #d0e0eb;
+}
+
+#books img {
+    width: 60%;
+    height: 60%;
+    margin: 48px;
+    border-radius: 10px;
+}
+
+#books h4 {
+    text-align: center;
+    font-size: 20px;
+    font-style: bold;
+    color: #2a6f93;
+    margin: auto;
+    font-family: 'Playfair Display', sans-serif;
+}
+
+#books p {
+    text-align: center;
+    font-size: 15px;
+    color: #2a6f93;
+    margin: auto;
+    font-family: 'Playfair Display', sans-serif;
+
+}
+/*tabela de livros*/
+.tabela-books table {
+    width: 80%;
+    height: 570px;
+    border: 3px solid #2a6f93;
+    border-radius: 10px;
+    background-color: #d0e0eb;
+    margin-left: 10%;
+}
+
+.tabela-books table thead {
+    background-color: #2a6f93;
+    color: #d0e0eb;
+    font-size: 20px;
+    font-style: bold;
+    font-family: 'Playfair Display', sans-serif;
+    border: 1px solid #2a6f93;
+    border-radius: 30px;
+}
+
+.tabela-books table thead tr th {
+    border: 1px solid #2a6f93;
+    border-radius: 10px;
+}
+
+.tabela-books table tr td {
+    text-align: center;
+    font-size: 15px;
+    color: #2a6f93;
+    font-family: 'Playfair Display', sans-serif;
+}
+
+.tabela-books table tbody tr td {
+    background-color: #d0e0eb;
+    border: 1px solid #2a6f93;
+    border-radius: 10px;
+}
+
+.tabela-books h2 {
+    text-align: center;
+    font-size: 30px;
+    color: #2a6f93;
+    font-family: 'Playfair Display', sans-serif;
+}
+
+.tabela-books p {
+    text-align: center;
+    font-size: 15px;
+    color: #000;
+    font-family: 'Playfair Display', sans-serif;
+}
+/*sugestões*/
+.sugestao fieldset {
+    width: 50%;
+    margin-left: 10%;
+    height: 30%px;
+    border: 3px #2a6f93;
+    border-style: solid;
+    border-radius: 5px;
+}
+
+.sugestao fieldset legend {
+    font-size: 20px;
+    color: #000000;
+    font-family: 'Playfair Display', sans-serif;
+}
+
+.sugestao fieldset p {
+    margin-left: 9%;
+    font-size: 15px;
+    color: #000000;
+    font-family: 'Playfair Display', sans-serif;
+}
+
+.sugestao fieldset label {
+    margin-left: 5%;
+    font-size: 15px;
+    color: #000000;
+    font-family: 'Playfair Display', sans-serif;
+}
+
+.sugestao fieldset input {
+    width: 350px;
+    height: 30px;
+    font-size: 15px;
+    color: #000000;
+    font-family: 'Playfair Display', sans-serif;
+    border-radius: 5px;
+}
+
+.sugestao fieldset #btenviar {
+    width: 300px;
+    height: 30px;
+    font-size: 15px;
+    color: #000000;
+    font-family: 'Playfair Display', sans-serif;
+    border-radius: 5px;
+    background-color: #2a6f93;
+    color: #fff;
+    border: none;
+    margin: 15px;
+    padding: auto;
+}
+/*quem somos*/
+.news h3 {
+    font-size: 25px;
+    color: #2a6f93;
+    font-family: 'Playfair Display', sans-serif;
+    text-align: center;
+    margin: 20px;
+}
+
+.news p {
+    font-size: 15px;
+    color: #000000;
+    font-family: 'Playfair Display', sans-serif;
+    text-align: justify;
+    margin: 30px;
+}
+
+.news img {
+    width: 30px;
+    height: 30px;
+    margin: auto;
+
+}
+/*blog*/
+.blog {
+    width: 90%;
+    height: auto;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-radius: 3px;
+    background-color: #fff;
+    box-shadow: 1px 1px 1px 1px #2a6f93;
+    padding: 10px;
+}
+
+.blog fieldset {
+    width: 90%;
+    height: auto;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-radius: 3px;
+    background-color: #fff;
+    box-shadow: 1px 1px 1px 1px #2a6f93;
+    padding: 10px;
+}
+
+.blog h4 {
+    font-size: 20px;
+    color: #2a6f93;
+    font-family: 'Playfair Display', sans-serif;
+    text-align: center;
+    margin: 20px;
+}
+
+.blog p {
+    font-size: 15px;
+    color: #000;
+    font-family: 'Playfair Display', sans-serif;
+    text-align: justify;
+    margin: 20px;
+}
+
+h2 {
+    font-size: 20px;
+    color: #2a6f93;
+    font-family: 'Playfair Display', sans-serif;
+    text-align: center;
+    margin: 20px;
+    font-size: 25px;
+}
+/*cadastro*/
+.cadastro-container {
+    width: 100%;
+    padding: 10px;
+    margin-left: 15%;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    border-radius: 30px;
+    width: 65%;
+    height: 85%;
+}
+
+.cadastro-container form label {
+    width: 400px;
+    height: 450px;
+    font-family: 'Playfair Display', sans-serif;
+    padding: 10px;
+    margin: 10px;
+    font-size: 15px;
+}
+
+.cadastro-container input {
+    width: 200px;
+    height: 25px;
+    font-family: 'Playfair Display', sans-serif;
+    padding: 10px;
+    margin: 10px;
+    font-size: 15px;
+}
+
+.cadastro-container button {
+    background-color: #2a6f93;
+    color: white;
+    padding: 10px;
+    margin: 30px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    width: 80%;
+    height: 40px;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+.radio label {
+    font-family: 'Playfair Display', sans-serif;
+    font-size: 15px;
+    color: #000;
+    text-align: justify;
+    margin: 20px;
+}
+
+.radio input {
+    width: 20px;
+    height: 20px;
+    margin: 5px;
+}
+
+.checkbox label {
+    font-family: 'Playfair Display', sans-serif;
+    font-size: 15px;
+    color: #000;
+    text-align: justify;
+    margin: 20px;
+}
+
+.checkbox input {
+    width: 20px;
+    height: 20px;
+    margin: 10px;
+}
+/*rodapé*/
+footer {
+    grid-area: footer;
+    color: #d0e0eb;
+    background-color: #49708a;
+    height: 20vh;
+}
+
+footer h2 {
+    text-align: center;
+    font-size: 25px;
+    font-style: bold;
+    color: #d0e0eb;
+    margin: auto;
+    font-family: 'Playfair Display', sans-serif;
+}
+
+footer p {
+    text-align: center;
+    font-size: 15px;
+    color: #d0e0eb;
+    padding: auto;
+    font-family: 'Playfair Display', sans-serif;
+}
